@@ -1,28 +1,31 @@
-CREATE DATABASE journals,
+/*\c postgres*/
+CREATE DATABASE journals;
 \c journals
 
-create table users 
-/*(
-    primary key,
-    // username string,
-    // email string,
-    // password 
-); */
-create table journals
-/* (
-    foreign key,
-    Entry entry
-
+create table users (
+    id INT PRIMARY KEY,
+    username TEXT NOT NULL,
+    email TEXT NOT NULL,
+    password TEXT NOT NULL
 );
-*/
+
+create table journals (
+    id SERIAL PRIMARY KEY,
+    u_id INT references users(id),
+    entryId INT
+);
 
 create table journalEntries (
-    /* foreign key,*/
-    publicity boolean,
-    date_created date,
-    entry string,
-    last_modified date,
-    user_id int,
-    activity_level int,
-    published boolean;
-)
+    journalID INT references journals(id),
+    u_id INT references users(id),
+    publicity BOOLEAN NOT NULL,
+    id SERIAL,
+    category TEXT,
+    date_created DATE,
+    entry_body TEXT NOT NULL,
+    last_modified DATE,
+    activity_level INT NOT NULL,
+    engagement_level INT NOT NULL,
+    published BOOLEAN,
+    PRIMARY KEY(u_id, journalID)
+);
