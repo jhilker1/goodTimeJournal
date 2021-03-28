@@ -48,5 +48,6 @@ insert into journalEntries (journalID, u_id, publicity, id, category, date_creat
     (1, 1, true, 1, 'hello', '2021-03-28','Lorem ipsum dolor sit amet.','2021-03-28',5,2,true),
     (2, 2, true, 1, 'hello', '2021-03-28','Lorem ipsum dolor sit amet.','2021-03-28',2,5,true),
     (3, 3, true, 1, 'hello', '2021-03-28','Lorem ipsum dolor sit amet.','2021-03-28',3,7,true),
-    (4, 4, false, 1, 'hello', '2021-03-28','I want this post to be private.','2021-03-28',2,2,true)
-    ;
+    (4, 4, false, 1, 'hello', '2021-03-28','I want this post to be private.','2021-03-28',2,2,true),
+    (1, 4, false, 1, 'hello', '2021-03-28','I want this post to be a private draft.','2021-03-28',2,2,false),
+    (2, 4, true, 1, 'hello', '2021-03-28','I want this post to be a public draft.','2021-03-28',2,2,false);
