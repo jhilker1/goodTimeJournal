@@ -1,4 +1,3 @@
-/*\c postgres*/
 CREATE DATABASE journals;
 \c journals
 
@@ -12,7 +11,7 @@ create table users (
 create table journals (
     id SERIAL PRIMARY KEY,
     u_id INT references users(id),
-    entryId INT
+    entryId INT /** I don't think we need entryId*/
 );
 
 create table journalEntries (
