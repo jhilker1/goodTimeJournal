@@ -51,3 +51,11 @@ insert into journalEntries (journalID, u_id, publicity, id, category, date_creat
     (4, 4, false, 1, 'hello', '2021-03-28','I want this post to be private.','2021-03-28',2,2,true),
     (1, 4, false, 1, 'hello', '2021-03-28','I want this post to be a private draft.','2021-03-28',2,2,false),
     (2, 4, true, 1, 'hello', '2021-03-28','I want this post to be a public draft.','2021-03-28',2,2,false);
+
+
+/*
+// Post Request
+INSERT INTO journalEntries (journalID, u_id, publicity, id, category, date_created, entry_body, last_modified, activity_level, engagement_level, published) values
+(journalID, userID, f, ,'', Date.now, userText, Date.now, userInput, userInput, t);
+
+*/
