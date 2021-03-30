@@ -1,3 +1,5 @@
+import Sidebar from './Sidebar.js';
+
 const layoutStyle = {
   margin: 20,
   padding: 20,
@@ -9,8 +11,9 @@ const layoutStyle = {
 export default function Layout(props) {
   return (
     <div style={layoutStyle}>
-      
-      {props.children}
+
+    { props.children }
     </div>
-  )
+
+  );
 }
