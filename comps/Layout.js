@@ -11,7 +11,8 @@ const layoutStyle = {
 export default function Layout(props) {
   return (
     <div style={layoutStyle}>
-
+      <Sidebar>
+        </Sidebar>
     { props.children }
     </div>
 
