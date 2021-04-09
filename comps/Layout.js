@@ -1,4 +1,6 @@
 import Sidebar from './Sidebar.js';
+import Container from '@material-ui/core/Container'
+import Box from '@material-ui/core/Box'
 
 const layoutStyle = {
   margin: 20,
@@ -10,11 +12,16 @@ const layoutStyle = {
 // imports Header pages in the layoutStyle above, index will import this
 export default function Layout(props) {
   return (
-    <div style={layoutStyle}>
-      <Sidebar>
-        </Sidebar>
-    { props.children }
-    </div>
+     <div>
+       <Sidebar />
+       <Box>
 
+       <Container>
+       <div style={layoutStyle}>
+         {props.children}
+       </div>
+       </Container>
+      </Box>
+     </div>
   );
 }
