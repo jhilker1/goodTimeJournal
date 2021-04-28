@@ -10,17 +10,15 @@ import Image from '../node_modules/material-ui-image'
 
 export default function Index() {
   return (
-    <div>
+      <div>
       <PersistentNav>
-        {/* <ResponsiveNav> */}
-        <h1>Welcome to the Good Time Journal!</h1>
-        <p>If you have an account, please sign in- </p>
-        <p>if not, create an account here.</p>
-        <Image 
-          src="http://getdrawings.com/image/bald-eagle-easy-drawing-57.jpg"
-        />
-        {/* </ResponsiveNav>  */}
+          <h1>Welcome to the Good Time Journal!</h1>
+          <p>If you have an account, please sign in- </p>
+          <p>if not, create an account here.</p>
+          <Image 
+            src="http://getdrawings.com/image/bald-eagle-easy-drawing-57.jpg"
+          />
       </PersistentNav>
-    </div> 
+      </div>
   );
 }
