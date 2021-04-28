@@ -6,8 +6,6 @@ import PersistentNav from "../comps/partials/PersistentNav";
 import ResponsiveNav from "../comps/partials/ResponsiveNav";
 import Image from '../node_modules/material-ui-image'
 
-
-
 export default function Index() {
   return (
       <div>

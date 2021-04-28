@@ -36,7 +36,7 @@ export default function PersistentNav(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap style={{ marginLeft: 100 }}>
-            Persistent drawer
+            Good Time Journal
           </Typography>
         </Toolbar>
       </AppBar>
@@ -52,6 +52,22 @@ export default function PersistentNav(props) {
                 <MailIcon />
               </ListItemIcon>
               <ListItemText primary="Home" />
+            </ListItem>
+          </Link>
+           <Link href="/SignIn">
+            <ListItem button key="Sign In">
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
+              <ListItemText primary="Sign In" />
+            </ListItem>
+          </Link>
+           <Link href="/SignUp">
+            <ListItem button key="Sign Up">
+              <ListItemIcon>
+                <MailIcon />
+              </ListItemIcon>
+              <ListItemText primary="Sign Up" />
             </ListItem>
           </Link>
           <Link href="/about">
