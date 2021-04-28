@@ -14,11 +14,12 @@ const config = {
 	database: "journals"
 };
 
+app.use(Express.static(__dirname + '/images'));
+
 const pool = new Pool(config);
 
 app.get("/api/public", async (req, res) => {
 	// req.query.q
-	// ? SELECT * FROM campgrounds WHERE name = ...
 	try {
 		const template = "select journalEntries.entry_body, journalEntries.publicity, journalEntries.u_id,  users.id from journalEntries join users on journalEntries.u_id=users.id where publicity = true;";
 		const response = await pool.query(template);
