@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import PersistentNav from "../comps/partials/PersistentNav";
 import ResponsiveNav from "../comps/partials/ResponsiveNav";
-import Image from '../node_modules/material-ui-image'
+import Image from 'material-ui-image';
 
 export default function Index() {
   return (
