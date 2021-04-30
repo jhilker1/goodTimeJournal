@@ -4,6 +4,11 @@
   :END:
 
 Next.js app for users to journal their energy levels
+* Table of Contents :toc:
+- [[#goodtimejournal][goodTimeJournal]]
+- [[#getting-started][Getting Started]]
+  -  [[#installation][Installation]]
+  - [[#running-the-application][Running The Application]]
 
 * Getting Started
 **  Installation
