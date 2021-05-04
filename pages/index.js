@@ -15,6 +15,7 @@ export default function Index() {
           <p>if not, create an account here.</p>
           <Image 
             src="http://getdrawings.com/image/bald-eagle-easy-drawing-57.jpg"
+            style={{width: 200, height: 200, marginLeft: 300}}
           />
       </PersistentNav>
       </div>
