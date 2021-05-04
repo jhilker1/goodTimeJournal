@@ -18,6 +18,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import Link from "@material-ui/core/Link";
+import Theme from "./Theme";
 
 export default function PersistentNav(props) {
   const [open, setOpen] = React.useState(false);
@@ -29,6 +30,8 @@ export default function PersistentNav(props) {
   };
   return (
     <div>
+      <Theme>
+
       <CssBaseline />
       <AppBar position="fixed">
         <Toolbar>
@@ -84,6 +87,8 @@ export default function PersistentNav(props) {
         </List>
       </Drawer>
       <main style={{ marginTop: 100, marginLeft: 150 }}>{props.children}</main>
+
+      </Theme>
     </div>
   );
 }

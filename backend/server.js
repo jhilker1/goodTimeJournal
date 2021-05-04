@@ -14,7 +14,6 @@ const config = {
 	database: "journals"
 };
 
-app.use(Express.static(__dirname + '/images'));
 
 const pool = new Pool(config);
 
@@ -34,6 +33,21 @@ app.get("/api/public", async (req, res) => {
 	}
 });
 
+app.get("/api/drafts", async (req, res) => {
+	// req.query.q
+	try {
+		const template = "SELECT journalEntries.entry_body, journalEntries.publicity, journalEntries.u_id,  users.id FROM journalEntries JOIN users ON journalEntries.u_id=users.id WHERE published = false;"
+		const response = await pool.query(template);
+		if (response.rowCount == 0) {
+			res.json({ status: "no posts found"});
+		} else {
+			res.json({ status: "ok", results: response.rows });
+		}
+	} catch (err) {
+		console.error("Error running query " + err);
+		res.json({ status: "error" });
+	}
+});
 app.post("/api/drafts", (req, res) => {
 	console.log(req.body);
 	const journalId = req.body.journalId;
