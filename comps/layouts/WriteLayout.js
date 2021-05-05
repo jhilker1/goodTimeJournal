@@ -9,14 +9,14 @@ import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import Divider from "@material-ui/core/Divider";
 
-import Navigation from "../Navigation";
+import PersistentNav from "../partials/PersistentNav";
 import PostButtons from "../postButtons";
 
 export default function WriteLayout(props) {
   const classes = makeStyles();
   return (
     <main>
-      <Navigation />
+      <PersistentNav />
       <br />
       <Container maxWidth="md">
         <Box my={4}>

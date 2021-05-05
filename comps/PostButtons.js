@@ -5,6 +5,7 @@ import SaveIcon from "@material-ui/icons/Save";
 import PublicIcon from "@material-ui/icons/Public";
 import LockIcon from "@material-ui/icons/Lock";
 import DeleteIcon from "@material-ui/icons/Delete";
+import Theme from "./partials/Theme";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -17,6 +18,8 @@ export default function PostButtons() {
 
   return (
     <div>
+      <Theme>
+
       <Button
         variant="contained"
         color="primary"
@@ -30,6 +33,7 @@ export default function PostButtons() {
         color="primary"
         className={classes.button}
         startIcon={<LockIcon />}
+        style={{marginLeft:20}} 
       >
         Post Private
       </Button>
@@ -38,6 +42,7 @@ export default function PostButtons() {
         color="primary"
         className={classes.button}
         startIcon={<PublicIcon />}
+        style={{marginLeft:20}} 
       >
         Post Public
       </Button>
@@ -46,9 +51,13 @@ export default function PostButtons() {
         color="secondary"
         className={classes.button}
         startIcon={<DeleteIcon />}
+
+        style={{marginLeft:20}} 
       >
         Delete
       </Button>
+
+      </Theme>
     </div>
   );
 }

@@ -2,13 +2,13 @@ import React from "react";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import Navigation from "../Navigation";
+import PersistentNav from "../partials/PersistentNav";
 import Button from "@material-ui/core/Button";
 
 export default function PostLayout(props) {
   return (
     <main>
-      <Navigation />
+      <PersistentNav>
       <Container maxWidth="md">
         <Box my={4}>
           <Typography>{props.children}</Typography>
@@ -17,6 +17,7 @@ export default function PostLayout(props) {
           Download PDF
         </Button>
       </Container>
+      </PersistentNav>
     </main>
   );
 }
