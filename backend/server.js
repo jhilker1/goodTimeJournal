@@ -48,6 +48,23 @@ app.get("/api/drafts", async (req, res) => {
 		res.json({ status: "error" });
 	}
 });
+
+app.get("/api/private", async (req, res) => {
+	// req.query.q
+	try {
+		const template = "select journalEntries.entry_body, journalEntries.publicity, journalEntries.u_id,  users.id from journalEntries join users on journalEntries.u_id=users.id where publicity = false;";
+		const response = await pool.query(template);
+		if (response.rowCount == 0) {
+			res.json({ status: "no posts found"});
+		} else {
+			res.json({ status: "ok", results: response.rows });
+		}
+	} catch (err) {
+		console.error("Error running query " + err);
+		res.json({ status: "error" });
+	}
+});
+
 app.post("/api/drafts", (req, res) => {
 	console.log(req.body);
 	const journalId = req.body.journalId;
