@@ -2,12 +2,18 @@ import React , { Component } from 'react';
 import PersistentNav from "../comps/partials/PersistentNav";
 
 
-class Login extends Component{
-    constructor(props){
-        super(props)
+function SignIn() {
+    const [username, setUsername] = React.useState("")
+    const [password, setPassword] = React.useState("")
 
+    function handleUpdate(evt){
+        setUsername(evt.target.value);
     }
-    render(){
+
+    function handleUpdatePassword(evt) {
+        setPassword(evt.target.value);
+    }
+
         return(
             <form className="login-form">
                 <div>
@@ -17,20 +23,20 @@ class Login extends Component{
                         <label for="Username">
                             Username:   
                         </label>
-                        <input name="username" type="text" value="" placeholder="Your Desired Username" />
+                        <input type="text" value={username} placeholder="Your Desired Username" onChange={handleUpdate}/>
                     </div>
                     <div className="form-group">
                         <label for="Password">
                             Password:  
                         </label>
-                        <input name="Password" type="Password" value="" placeholder="***********" />
+                        <input type="Password" value={password} placeholder="***********" onChange={handleUpdatePassword}/>
                     </div>
                     <input type="submit" value="Submit" />
             </PersistentNav>
                 </div>
             </form>
         )
-    }
+    
 }
 
-export default Login
+export default SignIn
